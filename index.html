@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana's Routine — 3D Organizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fundo 3D Interativo com Corações Flutuantes -->
+    <div class="bg-3d-scene">
+        <div class="shape shape-heart heart-1">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-2">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-3">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-4">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <header class="header">
+            <span class="badge">PERSONAL DASHBOARD</span>
+            <h1 class="title">Ana's Routine</h1>
+            <p class="subtitle">Organização diária, estudos, natação, leitura e hábitos de vida. Clique em um card para aprofundar e adicionar novas rotinas.</p>
+        </header>
+
+        <section class="grid-cards">
+            <!-- Card Estudo -->
+            <a href="estudo.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">📚</div>
+                    <span class="card-count" id="count-estudo">3 rotinas</span>
+                </div>
+                <h3>Estudo</h3>
+                <p>Escola no período da manhã, aulas extracurriculares à tarde e revisões diárias.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Foco & Aprendizado</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+
+            <!-- Card Trabalho -->
+            <a href="trabalho.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">🏠</div>
+                    <span class="card-count" id="count-trabalho">3 rotinas</span>
+                </div>
+                <h3>Trabalho</h3>
+                <p>Organização pessoal do quarto e auxílio diário nas tarefas de casa.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Responsabilidade</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+
+            <!-- Card Lazer -->
+            <a href="lazer.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">🍿</div>
+                    <span class="card-count" id="count-lazer">3 rotinas</span>
+                </div>
+                <h3>Lazer</h3>
+                <p>Momentos de relaxamento com leitura de livros, filmes e pausas sem tela.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Entretenimento</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+
+            <!-- Card Hobby -->
+            <a href="hobby.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">💡</div>
+                    <span class="card-count" id="count-hobby">3 rotinas</span>
+                </div>
+                <h3>Hobby</h3>
+                <p>Estudar assuntos do meu interesse por puro prazer, curiosidade e criatividade.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Paixão por Aprender</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+
+            <!-- Card Esportes -->
+            <a href="esportes.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">🏊‍♀️</div>
+                    <span class="card-count" id="count-esportes">3 rotinas</span>
+                </div>
+                <h3>Esportes</h3>
+                <p>Aulas de natação para fortalecimento físico, técnica e resistência.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Saúde & Movimento</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+
+            <!-- Card Saúde -->
+            <a href="saude.html" class="card">
+                <div class="card-top">
+                    <div class="card-icon">🥗</div>
+                    <span class="card-count" id="count-saude">3 rotinas</span>
+                </div>
+                <h3>Saúde</h3>
+                <p>Alimentação boa, balanceada, hidratação constante e rica em nutrientes.</p>
+                <div class="card-footer">
+                    <span class="card-tag">Nutrição & Bem-estar</span>
+                    <span class="btn-details">Abrir Página →</span>
+                </div>
+            </a>
+        </section>
+    </main>
+
+    <script src="routine.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', updateDashboardCounts);
+    </script>
+</body>
+</html>

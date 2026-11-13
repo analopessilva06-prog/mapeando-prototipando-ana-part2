@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo de Lazer — Ana's Routine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Fundo 3D Interativo com Corações Flutuantes -->
+    <div class="bg-3d-scene">
+        <div class="shape shape-heart heart-1">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-2">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-3">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+        <div class="shape shape-heart heart-4">
+            <div class="heart-3d">
+                <div class="heart-left"></div>
+                <div class="heart-right"></div>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Navegação Superior -->
+        <nav class="top-nav">
+            <a href="index.html" class="btn-back">← Voltar ao Início</a>
+            <div class="quick-nav">
+                <a href="estudo.html" class="">📚 Estudo</a>
+                <a href="trabalho.html" class="">🏠 Trabalho</a>
+                <a href="lazer.html" class="active">🍿 Lazer</a>
+                <a href="hobby.html" class="">💡 Hobby</a>
+                <a href="esportes.html" class="">🏊‍♀️ Esportes</a>
+                <a href="saude.html" class="">🥗 Saude</a>
+            </div>
+        </nav>
+
+        <!-- Cabeçalho da Categoria -->
+        <header class="header">
+            <span class="badge">ENTRETENIMENTO & DESCANSO</span>
+            <h1 class="title">🍿 Tempo de Lazer</h1>
+            <p class="subtitle">Momentos essenciais de descompressão com leitura de livros, cinema e descanso mental.</p>
+        </header>
+
+        <!-- Grid Principal: Adicionar Rotina + Lista Detalhada -->
+        <section class="detail-grid">
+            <!-- Painel Esquerdo: Formulário -->
+            <div class="glass-panel">
+                <h2 class="panel-title">Adicionar Nova Rotina</h2>
+                <form class="routine-form" id="addRoutineForm">
+                    <div class="form-group">
+                        <label for="routineTitle">Nome da Atividade *</label>
+                        <input type="text" id="routineTitle" placeholder="Ex: Ler 1 capítulo antes de dormir" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="routineTime">Horário / Frequência</label>
+                            <input type="text" id="routineTime" placeholder="Ex: 14:30 ou Diário">
+                        </div>
+                        <div class="form-group">
+                            <label for="routinePeriod">Período</label>
+                            <select id="routinePeriod">
+                                <option value="Manhã">Manhã</option>
+                                <option value="Tarde" selected>Tarde</option>
+                                <option value="Fim de Tarde">Fim de Tarde</option>
+                                <option value="Noite">Noite</option>
+                                <option value="Fim de Semana">Fim de Semana</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="routineDesc">Detalhes e Objetivo</label>
+                        <textarea id="routineDesc" rows="3" placeholder="Descreva como realizar essa atividade ou qual meta deseja alcançar..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-gradient">+ Adicionar à Rotina</button>
+                </form>
+
+                <div class="highlights-box">
+                    <h4>Dicas para manter o foco</h4>
+                    <ul class="highlights-list">
+                        <li>Ler antes de dormir ajuda a desacelerar a mente longe das telas.</li>
+                        <li>Reservar um tempo livre sem culpa melhora o foco nas obrigações.</li>
+                        <li>Anotar citações ou filmes favoritos cria um diário cultural pessoal.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Painel Direito: Lista de Rotinas & Progresso -->
+            <div class="glass-panel">
+                <h2 class="panel-title">Cronograma & Atividades</h2>
+
+                <div class="progress-box">
+                    <div class="progress-header">
+                        <span id="progressPercent">0% concluído</span>
+                        <span id="progressCount" style="color: var(--grad-blue);">0 de 0 rotinas</span>
+                    </div>
+                    <div class="status-bar">
+                        <div class="progress" id="progressFill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="routine-list" id="routineList">
+                    <!-- Preenchido dinamicamente pelo routine.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="routine.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initCategoryPage('lazer');
+        });
+    </script>
+</body>
+</html>
